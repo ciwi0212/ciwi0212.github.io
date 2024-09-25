@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script text="text/javascript" src="script.js"></script>
+    <header class="header">
+
+       <a href="#" class="logo"><i class="fa-sharp fa-solid fa-carrot"></i> Fresh-y </a>
+        <div class="navbar-section">
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <menu class="navbar-menu">
+                <li class="navbar-list"><a href="#home" id="home-link">Home</a></li>
+                <li class="navbar-list"><a href="#features" id="features-link">Features</a></li>
+                <li class="navbar-list"><a href="#products" id="products-link">Products</a></li>
+                <li class="navbar-list"><a href="#categories" id="categories-link">Categories</a></li>
+                <li class="navbar-list"><a href="aboutme.html">About Me</a></li>
+            </menu>
+            </div>
+
+            <div class="icon">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <img src="images/moon.png" id="logo">
+            </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="main-content">
+           <h3>We Provide <span style="color: orange;">Fresh</span> and <span style="color: orange;">Organic</span> Products For You!</h3> <br>
+            <p>Here, you'll find the most affordable price from many categories</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+    <section class="features" id="features">
+        <h1 class="heading"><span>Features</span></h1>
+        <div class="box-container">
+            <div class="feature-box">
+                <img src="images/grocery_1261163.png" alt="ini logo">
+                <h3>Best Quality Products</h3>
+                <p>Grown without synthetic perticides or harmful chemical, we guarantee the highest standards of health</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="feature-box">
+                <img src="images/truck_1755037.png" alt="ini logo">
+                <h3>Free Delivery</h3>
+                <p>We bring your groceries right in front of your house at no extra cost. Shop online and save your time!</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="feature-box">
+                <img src="images/pay_625599.png" alt="ini logo">
+                <h3>Easy Payment</h3>
+                <p>We offer multiple payment method to make your experience using our website enjoyable</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h1 class="heading"><span>Products</span></h1>
+           <div class="box-container">
+
+                <div class="product-box">
+                    <img src="images/strawberry.png" alt="strawberry">
+                    <h3>Fresh Strawberry</h3>
+                    <div class="price">Rp 20.000 -- Rp 45.000</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+                <div class="product-box">
+                    <img src="images/broccoli.png" alt="brokoli">
+                    <br>
+                    <br>
+                    <h3> Fresh Broccoli </h3> 
+                    <div class="price">Rp 15.000 -- Rp 30.000</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                
+                <div class="product-box">
+                    <img src="images/milk.png" alt="susu">
+                    <h3>Milk</h3>
+                    <div class="price">Rp 15.000 -- Rp 30.000</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+                <div class="product-box">
+                    <br>
+                    <img src="images/bread.png" alt="roti">
+                    <br>
+                    <br>
+                    <h3>Bread</h3>
+                    <div class="price">Rp 10.000 -- Rp 17.000</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>                
+    </section>
+
+    <section class="categories" id="categories">
+        <h1 class="heading"><span>Categories</span></h1>
+        <div class="box-container">
+
+            <div class="category-box">
+                <img src="images/vegetables.jpeg" alt="vegetables">
+                <br>
+                <br>
+                <br>
+                <h3>Vegetables</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+            <div class="category-box">
+                <img src="images/fruits.png" alt="fruits">
+                <br>
+                <br>
+                <br>
+                <h3>Fruits</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+            <div class="category-box">
+                <img src="images/dairy.png" alt="dairy">
+                <h3>Dairy Products</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+            <div class="category-box">
+                <img src="images/bakery.png" alt="bakery">
+
+
+                <br>
+                <br>
+                <h3>Bakery</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+        </div>
+    </section>
+    
+<script>
+    var logo = document.getElementById("logo");
+
+    logo.onclick = function(){
+      document.body.classList.toggle("dark-mode");  
+    }
+</script>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h4>Contact On</h4>
+            <p>Email: info@freshy.com</p>
+            <p>Phone: +62 93838948938</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow On</h4>
+            <div class="social-icons">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+    </div>
+</div>
+    <div class="footer-bottom">
+        <p>2024 Fresh-y. All rights reserved.</p>
+    </div>
+
+</footer>
+</body>
+</html>
