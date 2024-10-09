@@ -1,0 +1,67 @@
+<?php
+
+require "koneksi.php";
+$sql = mysqli_query($conn, "SELECT * FROM user");
+
+$user = [];
+
+while ($row = mysqli_fetch_assoc($sql)) {
+    $user[] = $row;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="read.css">
+    <title>Data Pengguna</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fa-sharp fa-solid fa-carrot"></i> Fresh-y </a>
+    </header>
+
+    <h4>Data Pengguna</h4>
+    <br>
+    <br>
+
+    <div class="container">
+        
+
+    <table border="1">
+            <tr>
+                <th>No.</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Menu</th>
+            </tr>
+        <tbody>
+            <?php $i = 1; foreach($user as $usr) : ?>
+                <tr>
+                    <td><?= $i ?></td>
+                    <td><?= $usr["first_name"] ?></td>
+                    <td><?= $usr["last_name"] ?></td>
+                    <td><?= $usr["age"] ?></td>
+                    <td><?= $usr["email"] ?></td>
+                    <td>
+                        <a href="edit.php?id=<?= $usr["id"] ?>" class="btn">Ubah</a> | 
+                        <a href="delete.php?id=<?= $usr["id"] ?>" class="btn"">Hapus</a>
+                    </td>
+                </tr>
+                <?php $i++; endforeach ?>
+            </tbody>
+        </table>
+
+    </div>
+    <br>
+    <button onclick="window.location.href='index.php'">Tambah Data</button>
+    <br>
+    <br>
+    <button onclick="window.location.href='index.html'">Masuk ke web</button>
+</body>
+</html>
